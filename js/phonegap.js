@@ -2,10 +2,10 @@ PhoneGap = { };
 navigator = { };
 
 PhoneGap.Device = {
-  //platform: phonegap.device.platform,
-  //version:  blackberry.system.softwareVersion,
-  //name:     blackberry.system.model,
-  //uuid:     phonegap.device.uuid
+  // platform: phonegap.device.platform,
+  // version:  blackberry.system.softwareVersion,
+  // name:     blackberry.system.model,
+  // uuid:     phonegap.device.uuid
 };
 window.device = navigator.device = PhoneGap.Device;
 
@@ -69,7 +69,7 @@ PhoneGap.exec = function(success, fail, klass, action, args) {
 }
 
 PhoneGap.callbackSuccess = function(callbackId, args) {
-    PhoneGap.callbacks[callbackId].success(args);
+    PhoneGap.callbacks[callbackId].success(args.message);
     PhoneGap.clearExec(callbackId);
 };
 
