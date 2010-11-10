@@ -1,4 +1,3 @@
-
 /*
  * PhoneGap is available under *either* the terms of the modified BSD license *or* the
  * MIT License (2008). See http://opensource.org/licenses/alphabetical for full text.
@@ -24,3 +23,11 @@ PhoneGap.addConstructor(function() {
   navigator.device = window.device = new Device();
   PhoneGap.onPhoneGapInfoReady.fire();
 });
+
+function exitApp(reasonToExit) {
+  reasonToExit = reasonToExit || 0;
+  if(reasonToExit != 0) {
+    alert(reasonToExit);
+  }
+  blackberry.app.exit();
+}
